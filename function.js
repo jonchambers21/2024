@@ -1,32 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('#main-nav a');
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
+  const navLinks = document.querySelectorAll('#main-nav a, #mobile-nav a');
+  navLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
           e.preventDefault();
           const targetId = link.getAttribute('href').substring(1);
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
-            window.scrollTo({
-              behavior: 'smooth',
-              top: targetElement.offsetTop
-            });
+              window.scrollTo({
+                  behavior: 'smooth',
+                  top: targetElement.offsetTop
+              });
           }
-        });
       });
-//Back To Top
-      const backToTopWorkButton = document.getElementById('backToTopWork');
-      const backToTopAboutButton = document.getElementById('backToTopAbout');
-      const backToTopContactButton = document.getElementById('backToTopContact');
-      backToTopWorkButton.addEventListener('click', scrollToTop);
-      backToTopAboutButton.addEventListener('click', scrollToTop);
-      backToTopContactButton.addEventListener('click', scrollToTop);
-    
-      function scrollToTop() {
-        window.scrollTo({
+  });
+
+  // Back To Top
+  const backToTopWorkButton = document.getElementById('backToTopWork');
+  const backToTopAboutButton = document.getElementById('backToTopAbout');
+  const backToTopContactButton = document.getElementById('backToTopContact');
+  backToTopWorkButton.addEventListener('click', scrollToTop);
+  backToTopAboutButton.addEventListener('click', scrollToTop);
+  backToTopContactButton.addEventListener('click', scrollToTop);
+
+  function scrollToTop() {
+      window.scrollTo({
           behavior: 'smooth',
           top: 0
-        });
-      }
+      });
+  }
+
+
 
       $( "#html-icon" ).on( "mouseover", function() {
         $(".html-hidden").fadeIn('fast');
