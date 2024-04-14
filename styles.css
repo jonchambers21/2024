@@ -369,8 +369,10 @@ span, h1, h2, h3 a {
   }
 
   .work-card img{
-    display: none;
-  }
+    display: block;
+    width: 90%;
+    margin: auto; 
+ }
 
   .work-card{
     padding:10px 0;
@@ -468,6 +470,10 @@ span, h1, h2, h3 a {
 
   .elem{
     margin: 0;
+  }
+
+  .work-card-link{
+    padding: 20px 0;
   }
 }
 
