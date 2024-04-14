@@ -208,17 +208,22 @@ span, h1, h2, h3 a {
 }
 
 .work-card{
-  display: flex;
+  display: block;
   justify-content: space-between;
   padding: 40px 0;
 }
 
+.work-card:not(:last-child){
+  border-bottom: rgba(255, 155, 0, 0.5) 2px solid;
+}
+
 .card-text-box{
-  width: 45%;
+  width: 100%;
 }
 
 .work-card img{
-  width: 50%;
+  width: 100%;
+  border-radius: 5px;
 }
 
 #client-hover{
@@ -246,9 +251,15 @@ span, h1, h2, h3 a {
 }
 
 
-.container-contact-button{text-align: center; padding: 40px; margin: 100px auto;}
+.container-contact-button{
+  text-align: center; 
+  padding: 40px; 
+  margin: 100px auto;
+}
 
-.elem{margin: 100px;}
+.elem{
+  margin: 100px;
+}
 
 /* Button */
 
@@ -322,7 +333,7 @@ span, h1, h2, h3 a {
   }
 
   .section-header{
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .header{
@@ -436,3 +447,31 @@ span, h1, h2, h3 a {
   line-height: 1.5;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .work-card:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .about-main{
+    width: 95%;
+    text-align: center;
+  }
+
+  .section-header{
+    justify-content: center;
+  }
+
+  .trendy-line-3{
+    display: none;
+  }
+
+  .elem{
+    margin: 0;
+  }
+}
+
+
+.container-contact-button{
+  margin: 40px 0;
+}
